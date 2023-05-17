@@ -1,0 +1,25 @@
+{
+  "name": "vquennbackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "María-Fernanda Villalobos",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime": "^7.21.5",
+    "@hapi/boom": "^10.0.1",
+    "@hapi/hapi": "^21.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/node": "^7.20.7",
+    "@babel/plugin-transform-runtime": "^7.21.4",
+    "@babel/preset-env": "^7.21.5",
+    "nodemon": "^2.0.22"
+  }
+}
