@@ -1,12 +1,16 @@
 import Boom from "@hapi/boom";
-import { fakeMenu } from "./fake-data";
+import { db } from "../database";
 
 export const getMenuRoute = {
     method: 'GET',
     path: '/api/menu/{id}',
-    handler: (req, h) => {
+    handler: async (req, h) => {
         const id = req.params.id;
-        const menu =  fakeMenu.find(menu => menu.id === id);
+        const { results } = await db.query(
+            'SELECT * FROM menu WHERE idmenu=?',
+            [id], 
+        ); 
+        const menu =  results[0];
         if (!menu) throw Boom.notFound(`Menu does not exist with id ${id}`);
         return menu;
 

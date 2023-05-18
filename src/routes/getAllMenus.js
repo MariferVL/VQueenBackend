@@ -1,9 +1,13 @@
-import { fakeMenu } from "./fake-data";
+import { db } from "../database";
 
 export const getAllMenuRoute = {
     method: 'GET',
     path: '/api/menu',
-    handler: (req,h) => {
-        return fakeMenu;
+    handler: async (req,h) => {
+        const { results } = await db.query(
+            'SELECT * FROM menu'
+        );
+        return results;
+        
     }
 }
