@@ -1,13 +1,12 @@
 import { db } from "../database";
 
-
-export const addSoldToMenuRoute = {
+export const addSaleToMenuRoute = {
     method: 'POST',
-    path: '/api/menu/{id}/sold',
+    path: '/api/menu/{id}/sale',
     handler: async (req, h) => {
         const id = req.params.id;
         await db.query(
-            'UPDATE menu SET sold=sold+1 WHERE idmenu=?',
+            'UPDATE menu SET sales=sales+1 WHERE idmenu=?',
             [id],
         );
         const { results } = await db.query(

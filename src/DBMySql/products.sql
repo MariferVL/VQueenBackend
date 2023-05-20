@@ -6,14 +6,14 @@ CREATE TABLE `menu` (
   `ingredients` varchar(100) NOT NULL,
   `allergens` varchar(100) NOT NULL,
   `price` decimal(10,2) NOT NULL,
-  `sold` int NOT NULL,
+  `sales` int NOT NULL,
   PRIMARY KEY (`idmenu`),
   UNIQUE KEY `idmenu_UNIQUE` (`idmenu`)
 );
 
 
 
-INSERT INTO menu(idmenu, name, image, description, ingredients, allergens, price, sold)
+INSERT INTO menu(idmenu, name, image, description, ingredients, allergens, price, sales)
 VALUES 
 ('VQ236464','Sopaipillas con Pebre', 'src\assets\Images\sopaipilla.png',
  "Sopaipillas con Pebre offers a regal combination of warm, golden sopaipillas and a vibrant salsa. The crispness of the sopaipillas paired with the zesty pebre creates a delightfully royal snack.",

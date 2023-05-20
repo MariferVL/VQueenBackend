@@ -1,15 +1,15 @@
 import { getAllMenuRoute } from "./getAllMenus";
 import { getMenuRoute } from "./getMenu";
-import { addSoldToMenuRoute } from "./addSoldToMenu";
 import { createNewMenuRoute } from "./createNewMenu";
 import { updateMenuRoute } from "./updateMenu";
 import { deleteMenuRoute } from "./deleteMenu";
+import { addSaleToMenuRoute } from "./addSaleToMenu";
 
 export default [
     getAllMenuRoute,
     getMenuRoute, 
-    addSoldToMenuRoute,
     createNewMenuRoute,
     updateMenuRoute,
     deleteMenuRoute,
+    addSaleToMenuRoute,
 ];

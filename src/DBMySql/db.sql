@@ -30,7 +30,7 @@ CREATE TABLE `menu` (
   `ingredients` varchar(111) NOT NULL,
   `allergens` varchar(111) NOT NULL,
   `price` decimal(10,2) NOT NULL,
-  `sold` int NOT NULL DEFAULT '0',
+  `sales` int NOT NULL DEFAULT '0',
   PRIMARY KEY (`idmenu`),
   UNIQUE KEY `idmenu_UNIQUE` (`idmenu`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1112 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

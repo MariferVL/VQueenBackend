@@ -9,16 +9,16 @@ export const createNewMenuRoute = {
         const id = 'VQ23' + uuid();
         const { name = '', image = '', description = '', ingredients = '', allergens = '', price = 0 } = req.payload;
         const userId = '12345';
-        const sold = 0;
+        const sales = 0;
 
         await db.query(`
-            INSERT INTO menu (idmenu, name, image, description, ingredients, allergens, price, sold)
+            INSERT INTO menu (idmenu, name, image, description, ingredients, allergens, price, sales)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?); 
             `,
-            [id, name, image, description, ingredients, allergens, price, sold]
+            [id, name, image, description, ingredients, allergens, price, sales]
         );
 
-        return {id, name, image, description, ingredients, allergens, price, sold};
+        return {id, name, image, description, ingredients, allergens, price, sales};
 
     }
 }
