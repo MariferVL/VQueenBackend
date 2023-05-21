@@ -12,7 +12,7 @@ export const createNewMenuRoute = {
         const sales = 0;
 
         await db.query(`
-            INSERT INTO menu (idmenu, name, image, description, ingredients, allergens, price, sales)
+            INSERT INTO menu (idmenu, name, imgRelPath, description, ingredients, allergens, price, sales)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?); 
             `,
             [id, name, image, description, ingredients, allergens, price, sales]

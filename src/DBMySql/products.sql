@@ -1,7 +1,7 @@
 CREATE TABLE `menu` (
   `idmenu` varchar(45) NOT NULL,
   `name` varchar(45) NOT NULL,
-  `image` varchar(100) NOT NULL,
+  `imgRelPath` varchar(100) NOT NULL,
   `description` varchar(600) NOT NULL,
   `ingredients` varchar(100) NOT NULL,
   `allergens` varchar(100) NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE `menu` (
 
 
 
-INSERT INTO menu(idmenu, name, image, description, ingredients, allergens, price, sales)
+INSERT INTO menu(idmenu, name, imgRelPath, description, ingredients, allergens, price, sales)
 VALUES 
 ('VQ236464','Sopaipillas con Pebre', 'src\assets\Images\sopaipilla.png',
  "Sopaipillas con Pebre offers a regal combination of warm, golden sopaipillas and a vibrant salsa. The crispness of the sopaipillas paired with the zesty pebre creates a delightfully royal snack.",

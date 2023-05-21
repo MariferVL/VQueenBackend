@@ -10,7 +10,7 @@ export const updateMenuRoute = {
         await db.query(
             `
             UPDATE menu 
-                SET name=?, image=?, description=?, ingredients=?, allergens=?, price=?
+                SET name=?, imgRelPath=?, description=?, ingredients=?, allergens=?, price=?
                 WHERE idmenu=? AND admin_id=?
             `, [name, image, description, ingredients, allergens, price, id, adminId]);
 
