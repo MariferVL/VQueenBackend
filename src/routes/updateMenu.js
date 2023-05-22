@@ -5,9 +5,7 @@ export const updateMenuRoute = {
     path: '/api/menu/{id}',
     handler: async (req, h) => {
         const { id } = req.params;
-        console.log('req.payload: ',req.payload);
         const { name, imgRelPath, description, ingredients, allergens, price } = req.payload;
-        console.log('name, imgRelPath, description, ingredients, allergens, price: ', name, imgRelPath, description, ingredients, allergens, price);
         const adminId = 'VQ237865';
         await db.query(
             `
@@ -21,7 +19,7 @@ export const updateMenuRoute = {
             [id, adminId],
 
         );
-        console.log('results: ', results);
+        
 
         return results[0];
 
